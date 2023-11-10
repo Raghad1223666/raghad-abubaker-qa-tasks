@@ -23,36 +23,45 @@ it("task2", () => {
   //Proceed to Checkout Button - select by class, element and :first-child
   cy.get("ul.checkout li:first-child .action.primary.checkout").click();
 
-  //********** Shipping Form **************
+  //********** Shipping Form / Shipping **************
   cy.wait(6000);
   //Email - select by id
-  cy.get("#customer-email-fieldset #customer-email");
+  cy.get("#customer-email-fieldset #customer-email").type(
+    "jyrofybyc@mailinator.com"
+  );
   //First name - select by attribute
-  cy.get("[name=firstname]");
+  cy.get("[name=firstname]").type("Stephanie");
   //Last name - select by attribute
-  cy.get("[name=lastname]");
+  cy.get("[name=lastname]").type("Burnett");
   //Company - select by attribute
-  cy.get("[name=company]");
+  cy.get("[name=company]").type("Crawford Webster Traders");
   //Street 0 - select by attribute
-  cy.get("[name='street[0]']");
+  cy.get("[name='street[0]']").type("562 East Oak Avenue");
   //Street 1 - select by attribute
-  cy.get("[name='street[1]']");
+  cy.get("[name='street[1]']").type("Est neque reiciendis");
   //Street 2 - select by attribute
-  cy.get("[name='street[2]']");
+  cy.get("[name='street[2]']").type("Reiciendis necessita");
   //City - select by attribute
-  cy.get("[name=city]");
+  cy.get("[name=city]").type("Ullamco nobis do pro");
   //Region - select by attribute and element
   cy.get("select[name=region_id]");
   //Postcode - select by attribute
-  cy.get("[name=postcode]");
+  cy.get("[name=postcode]").type("76219");
   //Country - select by attribute and element
-  cy.get("select[name=country_id]");
+  cy.get("select[name=country_id]").select("AF");
   //Telephone - select by attribute
-  cy.get("[name=telephone]");
+  cy.get("[name=telephone]").type("+1 (254) 906-6714");
   //Shipping Methods first radio- select by attribute and class
   cy.get(".radio[value=tablerate_bestway]");
   //Shipping Methods second radio - select by attribute and class
-  cy.get(".radio[value=flatrate_flatrate]");
+  cy.get(".radio[value=flatrate_flatrate]").check();
   //Next button - select by attribute and element
-  cy.get("button[data-role=opc-continue]");
+  cy.get("button[data-role=opc-continue]").click();
+
+  //********** Shipping Form / Review & Payments **************
+  cy.wait(1000);
+  //My billing input - select by id
+  cy.get("#billing-address-same-as-shipping-checkmo").click();
+  //Place Order - select by class
+  cy.get(".action.primary.checkout").click();
 });
