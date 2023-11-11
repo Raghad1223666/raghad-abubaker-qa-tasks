@@ -4,13 +4,13 @@ it("task2", () => {
   //********** Home page **************
   cy.visit("/");
   //Product - select by class, element and :first-child
-  cy.get("ol li.product-item:first-child ").click();
+  cy.get("ol li.product-item:first-child").click();
 
   //********** Product details page **************
   //Size - select by class and :first-child
-  cy.get(".swatch-attribute-options .swatch-option.text:first-child").click();
+  cy.get(".swatch-attribute-options .text:first-child").click();
   //Color - select by class and :nth-child
-  cy.get(".swatch-attribute-options .swatch-option.color:nth-child(2)").click();
+  cy.get(".swatch-attribute-options .color:nth-child(2)").click();
   //Qty - select by attribute and element
   cy.get("input[name=qty]").clear().type("4");
   //Add to Cart Button - select by id
@@ -19,12 +19,12 @@ it("task2", () => {
   cy.get(".message-success a").click();
 
   //********** Shopping Cart page **************
-  cy.wait(1000);
+  cy.wait(3000);
   //Proceed to Checkout Button - select by class, element and :first-child
-  cy.get("ul.checkout li:first-child .action.primary.checkout").click();
+  cy.get("ul li:first-child .checkout").click();
 
   //********** Shipping Form / Shipping **************
-  cy.wait(6000);
+  cy.wait(8000);
   //Email - select by id
   cy.get("#customer-email-fieldset #customer-email").type(
     "jyrofybyc@mailinator.com"
@@ -59,9 +59,9 @@ it("task2", () => {
   cy.get("button[data-role=opc-continue]").click();
 
   //********** Shipping Form / Review & Payments **************
-  cy.wait(1000);
+  cy.wait(3000);
   //My billing input - select by id
   cy.get("#billing-address-same-as-shipping-checkmo").click();
   //Place Order - select by class
-  cy.get(".action.primary.checkout").click();
+  cy.get(".action.checkout").click();
 });
