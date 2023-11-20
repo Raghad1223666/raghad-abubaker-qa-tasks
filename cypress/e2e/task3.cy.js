@@ -13,7 +13,6 @@ describe("TS_1: Check Sign in functionality", () => {
     cy.get("[type=password]").type("123");
     //Sign in button - Select by element
     cy.get("button").click();
-
   });
 });
 
@@ -26,25 +25,34 @@ describe("TS_2: Check Home page", () => {
     // Home nav item - Select by text and element
     cy.contains("a", "Home");
     // or
-    // Home nav item - Select by element, first, find, class
+    // Home nav item - Select by chain of element, first(position), find, class
     cy.get("ul").first().find(".nav-item").first().find(".nav-link.active");
 
     // Sign up nav item - Select by text and element
     cy.contains("a", "Sign up");
+    // or
+    // Sign up nav item - Select by chain of element, class, find and eq(position)
+    cy.get("ul").first().find(".nav-item").eq(2).find("a");
+
     // conduit header - Select by element and class
     cy.get("h1.logo-font");
     // A place ... subtitle - Select by text
     cy.contains("A place to share your knowledge.");
     // Global Feed Tab - Select by text
     cy.contains("Global Feed");
-    // Favorite button - Select by element and first
+    // Favorite button - Select by element and first(position)
     cy.get("favorite-btn").first();
-    // Read more label - Select by text, element and first
+    // Read more label - Select by text, element and first(position)
     cy.contains("span", "Read more...").first();
     // Popular Tags - Select by text, class and element
     cy.contains(".sidebar p", "Popular Tags");
+
     // codebaseShow tag - Select by text
     cy.contains("codebaseShow");
+    //or
+    // codebaseShow tag - Select by attribute and filter
+    cy.get('[ng-bind="tagName"]').filter(":contains(codebaseShow)");
+
     // deserunt tag - Select by text and class
     cy.contains(".tag-default.tag-pill", "deserunt");
   });
