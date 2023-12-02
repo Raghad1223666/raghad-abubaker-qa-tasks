@@ -14,9 +14,9 @@ describe("Check create an account page", () => {
   //Happy scenario
   it("verify from create account - Happy scenario", () => {
     cy.visit("/customer/account/create/");
-    cy.get("#firstname").type("Jermainppmmkk");
-    cy.get("#lastname").type("Johnsonpppmmmrr");
-    cy.get("#email_address").type("lmmmjjmnd@mailinator.com");
+    cy.get("#firstname").type("Jermainppmiiiiimkk");
+    cy.get("#lastname").type("Johnsonpppiiimmmrr");
+    cy.get("#email_address").type("lmmmjjmndiiii@mailinator.com");
     cy.get("#password").type("raghad9797#@");
     cy.get("#password-confirmation").type("raghad9797#@");
     cy.get(".submit").click();
