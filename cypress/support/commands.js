@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('login',()=>{
+    cy.fixture("task6Data").then((data)=>{
+        cy.get("#Email").clear().type(data.email);
+        cy.get("#Password").clear().type(data.password);
+        cy.get(".login-button").click();
+    })
+})
+
+
+Cypress.Commands.add('addProduct',(productName)=>{
+    cy.contains("Add new").click();
+    cy.get("#Name").clear().type(productName);
+    cy.get("[name=save]").click();
+    cy.wait(500)
+})
