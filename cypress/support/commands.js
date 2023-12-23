@@ -31,11 +31,3 @@ Cypress.Commands.add('login',()=>{
         cy.get(".login-button").click();
     })
 })
-
-
-Cypress.Commands.add('addProduct',(productName)=>{
-    cy.contains("Add new").click();
-    cy.get("#Name").clear().type(productName);
-    cy.get("[name=save]").click();
-    cy.wait(500)
-})
