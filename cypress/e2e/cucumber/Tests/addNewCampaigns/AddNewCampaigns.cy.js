@@ -42,7 +42,9 @@ When("The admin fill Body field", () => {
   cy.get("#Body").type("Cupidatat assumenda");
 });
 
-When("The admin fill Planned date of sending field", () => {});
+When("The admin fill Planned date of sending field", () => {
+    cy.get("#DontSendBeforeDate").type("12/29/2023 1:00 AM");
+});
 
 When("The admin select Limited to store from dropdown", () => {
   cy.get("#StoreId").select(0);
