@@ -35,11 +35,11 @@ When("The admin check the Active checkbox", () => {
 });
 
 When("The admin fill First Name field", () => {
-  cy.get("#Address_FirstName").type("Kai");
+  cy.get("#Address_FirstName").type("Radi");
 });
 
 When("The admin fill Last Name field", () => {
-  cy.get("#Address_LastName").type("Cruz");
+  cy.get("#Address_LastName").type("dioo");
 });
 
 When("The admin fill Email field", () => {
@@ -110,11 +110,11 @@ When("The admin reload the page", () => {
 });
 
 When("The admin search about the added affiliates", () => {
-  cy.get("#SearchFirstName").type("Kai");
-  cy.get("#SearchLastName").type("Cruz");
+  cy.get("#SearchFirstName").type("Radi");
+  cy.get("#SearchLastName").type("dioo");
   cy.get("#search-affiliates").click();
 });
 
 Then("The affiliates should be visible in the result table", () => {
-  cy.get("table tbody tr").should("contain", "Kai").and("contain", "Cruz");
+  cy.get("table tbody tr").should("contain", "Radi").and("contain", "dioo");
 });
