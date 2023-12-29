@@ -12,7 +12,7 @@ Feature: Add new discount functionality
         When The admin open promotions collapse item
         And The admin click on Discounts item
         And The admin click on Add new button
-        And The admin check the Is active checkbox
+        And The admin check Active checkbox
         And The admin fill Name field
         And The admin select Discount type
         And The admin check Apply to subcategories

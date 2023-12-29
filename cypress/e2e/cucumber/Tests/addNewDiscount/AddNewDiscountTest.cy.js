@@ -31,7 +31,7 @@ When("The admin click on Add new button", ()=>{
     cy.contains("Add new").click();
 })
 
-When("The admin check the Is active checkbox", ()=>{
+When("The admin check Active checkbox", ()=>{
     cy.get("#IsActive").check();
     
 })
