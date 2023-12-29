@@ -8,7 +8,7 @@ Feature: Add new affiliates functionality
         And The admin fill password field
         And The admin click on the Login button
 
-    Scenario: Verify that the user can add new affiliates successfully
+    Scenario: Verify that the admin can add new affiliates successfully
         When The admin open promotions collapse item
         And The admin click on Affiliates item
         And The admin click on Add new button

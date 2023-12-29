@@ -8,7 +8,7 @@ Feature: Add new discount functionality
         And The admin fill password field
         And The admin click on the Login button
 
-    Scenario: Verify that the user can add new discount successfully
+    Scenario: Verify that the admin can add new discount successfully
         When The admin open promotions collapse item
         And The admin click on Discounts item
         And The admin click on Add new button
