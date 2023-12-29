@@ -31,7 +31,7 @@ When("The admin click on Add new button", () => {
 });
 
 When("The admin fill Name field", () => {
-  cy.get("#Name").type("Ashton Roth");
+  cy.get("#Name").type("Tfeee jgg");
 });
 
 When("The admin fill Subject field", () => {
@@ -66,6 +66,6 @@ Then(
 );
 
 Then("The campaigns should be visible in the result table", () => {
-    cy.get("table tbody tr").should("contain", "Ashton Roth");
+    cy.get("table tbody tr").should("contain", "Tfeee jgg");
   });
   
