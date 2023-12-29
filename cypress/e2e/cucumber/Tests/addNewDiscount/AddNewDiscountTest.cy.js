@@ -34,8 +34,8 @@ When("The admin check Active checkbox", () => {
   cy.get("#IsActive").check();
 });
 
-When("The admin fill Name field", () => {
-  cy.get("#Name").type("Halee Fletcher");
+When("The admin fill Discount Name field", () => {
+  cy.get("#Name").type("Raghad discount");
 });
 
 When("The admin select Discount type", () => {
@@ -82,9 +82,10 @@ When("The admin reload the page", () => {
 });
 
 When("The admin search about discount name", () => {
-  cy.get("#SearchDiscountName").type("Halee Fletcher");
+  cy.get("#SearchDiscountName").type("Raghad discount");
+  cy.get("#search-discounts").click();
 });
 
 Then("The discount name should be visible in the result table", () => {
-  cy.get("#discounts-grid tbody tr").should("contain", "Halee Fletcher");
+  cy.get("#discounts-grid tbody tr").should("contain", "Raghad discount");
 });

@@ -30,7 +30,7 @@ When("The admin click on Add new button", () => {
   cy.contains("Add new").click();
 });
 
-When("The admin fill Name field", () => {
+When("The admin fill campaigns Name field", () => {
   cy.get("#Name").type("Tfeee jgg");
 });
 

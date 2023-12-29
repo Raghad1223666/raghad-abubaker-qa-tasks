@@ -13,7 +13,7 @@ Feature: Add new discount functionality
         And The admin click on Discounts item
         And The admin click on Add new button
         And The admin check Active checkbox
-        And The admin fill Name field
+        And The admin fill Discount Name field
         And The admin select Discount type
         And The admin check Apply to subcategories
         And The admin check Use percentage checkbox
