@@ -12,7 +12,7 @@ Feature: Add new Campaigns functionality
         When The admin open promotions collapse item
         And The admin click on campaigns item
         And The admin click on Add new button
-        And The admin fill campaigns Name field
+        And The admin fill Campaigns Name field
         And The admin fill Subject field
         And The admin fill Body field
         And The admin fill Planned date of sending field
