@@ -15,7 +15,7 @@ Feature: Add new discount functionality
         And The admin select Discount type
         And The admin check Apply to subcategories
         And The admin check Use percentage checkbox
-        And The admin fill Discount amount field
+        And The admin fill Discount percentage field
         And The admin check Requires coupon code checkbox
         And The admin fill Coupon code field
         And The admin fill Maximum discounted quantity field

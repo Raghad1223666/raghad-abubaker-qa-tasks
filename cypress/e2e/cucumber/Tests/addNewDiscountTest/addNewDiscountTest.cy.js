@@ -42,7 +42,8 @@ When("The admin check Use percentage checkbox", () => {
   cy.get("#UsePercentage").check();
 });
 
-When("The admin fill Discount amount field", () => {
+When("The admin fill Discount percentage field", () => {
+  cy.wait(1000);
   cy.get("#pnlDiscountAmount  input:nth-child(1)").type("4", { force: true });
 });
 
