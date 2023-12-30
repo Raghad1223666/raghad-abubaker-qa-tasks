@@ -4,16 +4,8 @@ Given("The admin visit website", () => {
   cy.visit("https://admin-demo.nopcommerce.com/login");
 });
 
-When("The admin fill email field", () => {
-  cy.get("#Email").clear().type("admin@yourstore.com");
-});
-
-When("The admin fill password field", () => {
-  cy.get("#Password").clear().type("admin");
-});
-
-When("The admin click on the Login button", () => {
-  cy.get("[type='submit']").click();
+When("The admin login to website", () => {
+  cy.loginToNopcommerce("admin@yourstore.com", "admin");
 });
 
 When("The admin open promotions collapse item", () => {

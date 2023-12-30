@@ -4,15 +4,13 @@ Feature: Add new Campaigns functionality
 
     Background: The admin should login
         Given The admin visit website
-        When The admin fill email field
-        And The admin fill password field
-        And The admin click on the Login button
+        When The admin login to website
 
     Scenario: Verify that the admin can add new Campaigns successfully
         When The admin open promotions collapse item
         And The admin click on campaigns item
         And The admin click on Add new button
-        And The admin fill Campaigns Name field
+        And The admin fill Campaign Name field
         And The admin fill Subject field
         And The admin fill Body field
         And The admin fill Planned date of sending field

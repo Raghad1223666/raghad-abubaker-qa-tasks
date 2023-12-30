@@ -31,3 +31,9 @@ Cypress.Commands.add('login',()=>{
         cy.get(".login-button").click();
     })
 })
+
+Cypress.Commands.add('loginToNopcommerce',(email, password)=>{
+    cy.get("#Email").clear().type(email);
+    cy.get("#Password").clear().type(password);
+    cy.get("[type='submit']").click();
+})

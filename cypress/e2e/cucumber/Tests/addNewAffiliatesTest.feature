@@ -4,9 +4,7 @@ Feature: Add new affiliates functionality
 
     Background: The admin should login
         Given The admin visit website
-        When The admin fill email field
-        And The admin fill password field
-        And The admin click on the Login button
+        When The admin login to website
 
     Scenario: Verify that the admin can add new affiliates successfully
         When The admin open promotions collapse item
