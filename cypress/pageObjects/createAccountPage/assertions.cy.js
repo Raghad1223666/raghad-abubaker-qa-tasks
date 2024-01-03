@@ -1,3 +1,5 @@
-class createAccountPageAssertions {}
+class createAccountPageAssertions {
+  
+}
 
 export default createAccountPageAssertions;

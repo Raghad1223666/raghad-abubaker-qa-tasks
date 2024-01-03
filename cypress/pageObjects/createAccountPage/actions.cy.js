@@ -1,5 +1,5 @@
 class createAccountPageActions {
-    
+
   typeInFirstNameField(firstName) {
     cy.get("#firstname").clear().type(firstName);
     return this;
@@ -27,6 +27,7 @@ class createAccountPageActions {
 
   clickOnCreateAccountButton() {
     cy.get(".submit.primary").click();
+    return this;
   }
 }
 
