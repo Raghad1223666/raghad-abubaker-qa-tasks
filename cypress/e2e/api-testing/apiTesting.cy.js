@@ -35,6 +35,7 @@ describe("Api-Testing", () => {
       body: { first_name: "Rayan", last_name: "Abu Baker" },
     }).then((response) => {
       expect(response.status).to.be.eq(200);
+      expect(response.statusText).to.be.equal("OK");
       expect(response.body.first_name).to.be.equal("Rayan");
       expect(response.body.last_name).to.be.equal("Abu Baker");
     });
@@ -47,6 +48,7 @@ describe("Api-Testing", () => {
       body: { first_name: "Rayan", last_name: "Abu Baker" },
     }).then((response) => {
       expect(response.status).to.be.eq(200);
+      expect(response.statusText).to.be.equal("OK");
       expect(response.body.first_name).to.be.equal("Rayan");
       expect(response.body.last_name).to.be.equal("Abu Baker");
     });
@@ -57,7 +59,8 @@ describe("Api-Testing", () => {
       method: "DELETE",
       url: "https://reqres.in/api/users/1",
     }).then((response) => {
-      expect(response.status).to.be.eq(204);
+      expect(response.status).to.be.eq(204);  
+      expect(response.statusText).to.be.equal("No Content")
     });
   });
 
@@ -67,6 +70,7 @@ describe("Api-Testing", () => {
     query: "Palestine"
     }}).then((response) =>{
     expect(response.status).to.eq(200);
+    expect(response.statusText).to.be.equal("OK");
     })
     })
 });
