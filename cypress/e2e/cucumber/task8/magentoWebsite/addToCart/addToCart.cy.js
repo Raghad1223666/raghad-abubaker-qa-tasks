@@ -26,8 +26,8 @@ When(
   (size, colorIndex) => {
     sharedAction.waitSeconds(4000);
     addToCartActions
-      .chooseSizeForProduct(size)
-      .chooseColorForProduct(colorIndex);
+      .chooseProductSize(size)
+      .chooseProductColor(colorIndex);
   }
 );
 

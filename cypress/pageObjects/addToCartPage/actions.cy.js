@@ -10,12 +10,12 @@ class addToCartPageActions {
     return this;
   }
 
-  chooseSizeForProduct(size) {
+  chooseProductSize(size) {
     cy.get(".swatch-attribute.size").contains(size).click();
     return this;
   }
 
-  chooseColorForProduct(colorIndex) {
+  chooseProductColor(colorIndex) {
     cy.get(".swatch-attribute.color")
       .find(".swatch-option")
       .eq(colorIndex)
