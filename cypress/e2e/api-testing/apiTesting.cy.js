@@ -1,9 +1,11 @@
 /// <reference types="cypress" />
 
 describe("Api-Testing", () => {
-  it("Simple Request", () => {
+  it.only("Simple Request", () => {
     cy.request("GET", "https://www.bstackdemo.com/").then((response) => {
+      cy.log(response)
       expect(response.status).to.be.eq(200);
+      expect(response.duration).to.be.lessThan(3000);
     });
   });
 
@@ -16,7 +18,7 @@ describe("Api-Testing", () => {
     });
   });
 
-  it("POST Request", () => {
+  it.only("POST Request", () => {
     cy.request({
       method: "POST",
       url: "https://reqres.in/api/users",
@@ -25,6 +27,7 @@ describe("Api-Testing", () => {
       expect(response.status).to.be.equal(201);
       expect(response.statusText).to.be.equal("Created");
       expect(response.body.name).to.be.equal("Raghad Abu Baker");
+      expect(response.duration).to.be.lessThan(3000);
     });
   });
 
